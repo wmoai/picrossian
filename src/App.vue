@@ -1,19 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Picross
+      :columns="[[3], [0], [1, 1], [0], [0], [0], [0], [0]]"
+      :rows="[[1, 1], [1], [1, 1], [0], [0], [0], [0], [0]]"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Picross from './components/Picross.vue';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
-  }
-}
+    Picross,
+  },
+};
 </script>
 
 <style>
@@ -21,8 +23,6 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
